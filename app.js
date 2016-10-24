@@ -7,18 +7,25 @@ define(function(require, exports, module) {
     Vue.use(VueRouter);
     Vue.use(VueResourc);
 
-    var Home = require('./views/home');
-    var Login = require('./views/login');
+    // 路由Pages
+    var pageHome = require('./views/home');
+    var pageLogin = require('./views/login');
 
+    // 配置路由
     var router = new VueRouter({
         routes: [
-            { path: '/', component: Home },
-            { path: '/login', component: Login }
+            { path: '/', component: pageHome },
+            { path: '/login', component: pageLogin }
         ]
     });
 
+    // 初始化Vue
     new Vue({
-        router
+        router,
+        components: {
+            'vHeader': require('./views/components/header'),
+            'vFooter': require('./views/components/footer'),
+        }
     }).$mount('#app');
     
 });
