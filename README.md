@@ -20,6 +20,11 @@
     │   ├───images
     │   └───js
     ├───views
+    │       ├───components
+    │       │       footer.js
+    │       │       footer.tpl
+    │       │       header.js
+    │       │       header.tpl
     │       home.js
     │       home.tpl
     │       login.js
